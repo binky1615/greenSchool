@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: #66D575;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 75px;
+    
+}
+
+nav img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+nav li{
+    cursor: pointer;
+    background-color: #288B35;
+    padding: 10px 20px;
+}
+
+nav li:hover{
+    background-color: #206d2a;
+    transition: background-color 0,7s ease-in-out, transform 0,7s ease-in-out;
+    transform: scale(1.1);
+}
+
+nav a{
+    text-decoration: none;
+    color: #fff;
+}
+
+footer{
+    background-color: #66D575;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 75px;    
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gradient{
+    background-image: url('img/gradient.png');
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+}
+
+.white{
+    background-color: #fff;
+    height: 50vh;
+}
+
+.green{
+    background-color: #288B35;
+    height: 50vh;
+}
