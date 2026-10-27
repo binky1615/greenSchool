@@ -17,31 +17,43 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <section class="gradient">
+    <section class="green">
         <h1>New</h1>
-        <h1>Green school’s Plant care bot</h1>
     </section>
     <section class="white">
-        <div>
-            <h2>
-                Plant care bot
-            </h2>
-            <p>
-                Korte beschrijving van de functies
-            </p>
-        </div>
-        <!-- <img src="css/img/plant.png" alt="Plant"> -->
-    </section>
-    <section class="green">
-        <img src="" alt="">
-        <div>
-            <h2>
-                Doelgroep
-            </h2>
-            <p>
-                Korte beschrijving over waar het product voor is bedoeld en waarom.
-            </p>
-        </div>
+        <form action="submit_form.php" method="post">
+            <div>
+                <label for="fname" placeholder="John">First Name:</label>
+                <input type="text" id="fname" name="fname" required>
+                <label for="lname" placeholder="Doe">Last Name:</label>
+                <input type="text" id="lname" name="lname" required>              
+            </div>
+            <div>
+                <label for="email" placeholder="john.doe@example.com">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="Educational institution" placeholder="University of Example">Educational Institution:</label>
+                <input type="text" id="Educational institution" name="Educational institution" required>
+            </div>            
+            <div>
+                <label for="address" placeholder="123 Main St">Address:</label>
+                <input type="text" id="address" name="address" required>
+                <label for="city" placeholder="Anytown">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div>
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Support</option>
+                    <option value="feedback">Feedback</option>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>                
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
     <footer>
         <ul>
