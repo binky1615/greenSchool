@@ -18,86 +18,93 @@
         </ul>
     </nav>
     <section class="green">
-        <h1>Contact Form</h1>
-        <p>
-            We would love to hear from you! Please fill out the form below and we'll get back to you as soon as possible.
-        </p>
+        <h1>Contact</h1>
+        <p>Do you have a question about our product or something else? Feel free to contact us by filling in the form below.</p>
     </section>
-    <section class="white">
+
+    <section class="form-section">
+        <h2>Contact Form</h2>
+
         <form action="submit_form.php" method="post">
-            <div>
-                <div>
-                    <label for="fname" placeholder="John">First Name:</label>
-                    <input type="text" id="fname" name="fname" required>
+            <div class="row">
+                <div class="field">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" placeholder="First name" required>
                 </div>
-                <div>
-                    <label for="lname" placeholder="Doe">Last Name:</label>
-                    <input type="text" id="lname" name="lname" required>     
-                </div>         
-            </div>
-            <div>
-                <div>
-                    <label for="email" placeholder="john.doe@example.com">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="phone" placeholder="123-456-7890">Phone:</label>
-                    <input type="tel" id="phone" name="phone" required>
+                <div class="field">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" placeholder="Last name" required>
                 </div>
             </div>
-            <div>
-                <div>
-                    <label for="Educational institution" placeholder="University of Example">Educational Institution:</label>
-                    <input type="text" id="Educational institution" name="Educational institution" required>
+
+            <div class="row">
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
                 </div>
-            </div>            
-            <div>
-                <div>
-                    <label for="address" placeholder="123 Main St">Address:</label>
-                    <input type="text" id="address" name="address" required>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <label for="house number" placeholder="123">House Number:</label>
-                    <input type="text" id="house number" name="house number" required>
-                </div>
-                <div>
-                    <label for="zip" placeholder="12345">ZIP Code:</label>
-                    <input type="text" id="zip" name="zip" required>
+                <div class="field">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
                 </div>
             </div>
-            <div>
-                <div>
-                    <label for="city" placeholder="Anytown">City:</label>
-                    <input type="text" id="city" name="city" required>
+
+            <div class="field">
+                <label for="school">Educational Institution</label>
+                <input type="text" id="school" name="school" placeholder="Type your educational institution..." required>
+            </div>
+
+            <h3>Address</h3>
+
+            <div class="field">
+                <label for="address">Street Name</label>
+                <input type="text" id="address" name="address" placeholder="Enter your street name" required>
+            </div>
+
+            <div class="row">
+                <div class="field">
+                    <label for="house_number">House Number</label>
+                    <input type="text" id="house_number" name="house_number" placeholder="123" required>
+                </div>
+                <div class="field">
+                    <label for="zip">ZIP Code</label>
+                    <input type="text" id="zip" name="zip" placeholder="12345" required>
                 </div>
             </div>
-            <div>
-                <div>
-                    <label for="subject">Subject:</label>
-                    <select id="subject" name="subject" required>
-                        <option value="">Select a subject</option>
-                        <option value="product">Product</option>
-                        <option value="order">Order Inquiry</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
+
+            <div class="field">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="Enter the city of the school" required>
             </div>
-            <div>
-                <div>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>                      
-                </div>
+
+            <div class="field">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Choose a subject...</option>
+                    <option value="product">Question about our product</option>
+                    <option value="order">Question about my order</option>
+                    <option value="other">Other</option>
+                </select>
             </div>
-            <button type="submit">Send Message</button>
+
+            <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Type your message here...." required></textarea>
+            </div>
+
+            <label class="checkbox">
+                <input type="checkbox" name="terms" required>
+                I agree to the terms and conditions
+            </label>
+
+            <button type="submit">Send</button>
         </form>
     </section>
+
     <footer>
         <ul>
-            <li>Privacy</li>
-            <li>Disclaimer</li>
-            <li>Terms</li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
         <p>&copy; 2026 GreenSchool. All rights reserved.</p>
     </footer>

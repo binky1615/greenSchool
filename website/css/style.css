@@ -58,18 +58,61 @@ footer ul{
     list-style: none;
     display: flex;
     gap: 20px;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-around;
 }
+
+footer a {
+    text-decoration: none;
+}
+
 
 .gradient{
     background-image: url('img/gradient.png');
     background-size: cover;
     background-position: center;
     height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.5rem;
 }
 
 .white{
     background-color: #fff;
+}
+
+.white-home{
+    background-color: #fff;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.white-home ul{
+    margin-top: 20px;
+}
+
+/* .white-home li::before {
+  content: "•";
+  font-size: 1.5rem;
+} */
+
+.white-home img{
+    width: 35vh;
+    height: auto;
+    object-fit: contain;
+}
+
+.wh-div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #000;
 }
 
 .green{
@@ -98,28 +141,99 @@ footer ul{
     object-fit: contain;
 }
 
-form{
+.green-home{
+    background-color: #288B35;
+    height: 50vh;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
     align-items: center;
-}
-form div{
-    display: flex;
+    justify-content: space-around;
     flex-direction: row;
-    gap: 10px;
-
-}
-form div div{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
 
-section div{
+.green-home img{
+    width: 30%;
+    height: auto;
+    object-fit: contain;
+}
+
+.green-home div{
+    width: 40%;
+    gap: 20px;
     display: flex;
     flex-direction: column;
+}
+
+.form-section {
+    background-color: #f2f2f2;
+    padding: 20px 20px 60px;
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.row {
+    display: flex;
+    gap: 40px;
+}
+
+.field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+label {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #000;
+    background-color: #fff;
+    font: inherit;
+}
+
+textarea {
+    height: 250px;
+}
+
+.checkbox {
+    display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 20px;
+    gap: 15px;
+    font-size: 1rem;
+    font-weight: normal;
 }
+
+.checkbox input {
+    width: 28px;
+    height: 28px;
+}
+
+button {
+    background-color: #288B35;
+    border: none;
+    padding: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #206d2a;
+}
+
