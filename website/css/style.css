@@ -80,8 +80,15 @@ footer a {
     font-size: 1.5rem;
 }
 
-.white{
+.white-product{
+    display: flex;
     background-color: #fff;
+}
+
+.number-count li::before {
+  font-size: 1rem;
+  content: counter(list-item) ". ";
+  margin-right: 10px;    
 }
 
 .white-home{
@@ -97,10 +104,10 @@ footer a {
     margin-top: 20px;
 }
 
-/* .white-home li::before {
+.point-list li::before {
   content: "•";
-  font-size: 1.5rem;
-} */
+  font-size: 1rem;
+}
 
 .white-home img{
     width: 35vh;
@@ -115,7 +122,7 @@ footer a {
     border: 1px solid #000;
 }
 
-.green{
+.green-product{
     background-color: #288B35;
     height: 50vh;
     display: flex;
@@ -123,22 +130,48 @@ footer a {
     justify-content: space-around;
     flex-direction: column;
 }
-.green div{
+
+.green{
+    background-color: #288B35;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.green-product div{
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
+    gap: 50px;
 }
 
-.green div p{
+.green-product div div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.green-product div p{
     text-align: center;
     max-width: 600px;
 }
 
-.green div img{
-    width: 20%;
-    height: auto;
+.green-product div img{
+    height: 35vh;
+    width: auto;
     object-fit: contain;
+}
+
+.green-product button{
+    background-color: #66D575;
+    border: none;
+    padding: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
 }
 
 .green-home{
@@ -237,3 +270,6 @@ button:hover {
     background-color: #206d2a;
 }
 
+#thanks{
+    height: 80vh;
+}
