@@ -8,7 +8,7 @@ en kan aanpassen hoe warm de plant het moet hebben
 let SoilReading = 0;
 let WaterReading = 0;
 let DryValue = 800;
-let ReserviorHasWater = false;
+let ReservoirHasWater = false;
 let LoggingEnabled = true;
 
 light.setBrightness(45);
@@ -21,7 +21,7 @@ datalogger.setSampleInterval(1000);
 // Geeft plant water en houdt in de gaten of de plant niet teveel krijgt
 function waterPlants() {
     while (SoilReading < DryValue) {
-        if (!ReserviorHasWater) {
+        if (!ReservoirHasWater) {
             crickit.motor1.stop();
             light.setAll(Colors.Indigo);
             return;
@@ -30,7 +30,7 @@ function waterPlants() {
         crickit.motor1.run(60);
         pause(100);
 
-        if (!ReserviorHasWater) {
+        if (!ReservoirHasWater) {
             crickit.motor1.stop();
             light.setAll(Colors.Indigo);
             return;
@@ -39,7 +39,7 @@ function waterPlants() {
         crickit.motor1.run(40);
 
         for (let i = 0; i < 50; i++) {
-            if (!ReserviorHasWater) {
+            if (!ReservoirHasWater) {
                 crickit.motor1.stop();
                 light.setAll(Colors.Indigo);
                 return;
@@ -50,7 +50,7 @@ function waterPlants() {
         crickit.motor1.stop();
 
         for (let i = 0; i < 250; i++) {
-            if (!ReserviorHasWater) {
+            if (!ReservoirHasWater) {
                 light.setAll(Colors.Indigo);
                 return;
             }
@@ -66,9 +66,9 @@ control.runInParallel(function checkWaterReservior() {
         WaterReading = input.pinA7.value();
 
         if (WaterReading > 800) {
-            ReserviorHasWater = true;
+            ReservoirHasWater = true;
         } else {
-            ReserviorHasWater = false;
+            ReservoirHasWater = false;
         }
 
         pause(100);
@@ -85,13 +85,13 @@ control.runInParallel(function logSensorValues() {
         // Console grafiek
         console.logValue("Soil", SoilReading);
         console.logValue("Water", WaterReading);
-        console.logValue("Reservoir", ReserviorHasWater ? 1 : 0);
+        console.logValue("Reservoir", ReservoirHasWater ? 1 : 0);
 
         // Datalogger
         if (LoggingEnabled) {
             datalogger.addValue("Soil", SoilReading);
             datalogger.addValue("Water", WaterReading);
-            datalogger.addValue("Reservoir", ReserviorHasWater ? 1 : 0);
+            datalogger.addValue("Reservoir", ReservoirHasWater ? 1 : 0);
             datalogger.addRow();
         }
 
