@@ -276,7 +276,6 @@ button:hover {
 
 @media (max-width: 768px) {
 
-    /* NAV */
     nav {
         height: auto;
         padding: 10px;
@@ -303,7 +302,6 @@ button:hover {
         transform: none;
     }
 
-    /* FOOTER */
     footer {
         height: auto;
         padding: 15px 20px;
@@ -315,7 +313,6 @@ button:hover {
         gap: 10px;
     }
 
-    /* HERO */
     .gradient {
         height: auto;
         min-height: 40vh;
@@ -324,7 +321,6 @@ button:hover {
         text-align: center;
     }
 
-    /* SECTIONS: let content decide the height, then stack */
     .white-home,
     .green-home,
     .green-product,
@@ -367,7 +363,6 @@ button:hover {
         max-width: 100%;
     }
 
-    /* FORM */
     .form-section {
         padding: 20px 15px 40px;
     }
@@ -380,14 +375,13 @@ button:hover {
     input,
     select,
     textarea {
-        font-size: 16px; /* stops iOS from zooming in on focus */
+        font-size: 16px; 
     }
 
     textarea {
         height: 180px;
     }
 
-    /* THANK YOU PAGE */
     #thanks {
         height: auto;
         min-height: 60vh;
