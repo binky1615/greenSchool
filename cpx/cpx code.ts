@@ -28,17 +28,8 @@ function waterPlants() {
         }
 
         crickit.motor1.run(60);
-        pause(100);
 
-        if (!ReservoirHasWater) {
-            crickit.motor1.stop();
-            light.setAll(Colors.Indigo);
-            return;
-        }
-
-        crickit.motor1.run(40);
-
-        for (let i = 0; i < 50; i++) {
+        for (let i = 0; i < 150; i++) {
             if (!ReservoirHasWater) {
                 crickit.motor1.stop();
                 light.setAll(Colors.Indigo);
