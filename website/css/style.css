@@ -1,15 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #000;
+    font-family: 'open sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+footer a,
+footer p,
+div button{
+    font-family: "Black Ops One", system-ui;
 }
 
 nav{
     background-color: #66D575;
     display: flex;
     align-items: center;
-    padding: 0 20px;
     height: 75px;
     position: sticky;
     top: 0;
@@ -30,13 +41,13 @@ nav ul{
     justify-content: center;
 }
 
-ul a:hover{
+nav ul a:hover{
     background-color: #206d2a;
     transition: background-color 0,7s ease-in-out, transform 0,7s ease-in-out;
     transform: scale(1.1);
 }
 
-ul a{
+nav ul a{
     text-decoration: none;
      cursor: pointer;
     background-color: #288B35;
@@ -62,7 +73,6 @@ footer ul{
 footer a {
     text-decoration: none;
 }
-
 
 .gradient{
     background-image: url('img/gradient.png');
@@ -211,6 +221,14 @@ form {
     gap: 20px;
 }
 
+form :invalid{
+    border: 2px solid red;
+}
+
+form :valid{
+    border: 2px solid lightgreen;
+}
+
 .row {
     display: flex;
     gap: 40px;
@@ -230,12 +248,15 @@ label {
 
 input,
 select,
-textarea {
+textarea,
+placeholder {
     width: 100%;
     padding: 6px;
     border: 1px solid #000;
     background-color: #fff;
     font: inherit;
+    border-radius: 10px;
+
 }
 
 textarea {
