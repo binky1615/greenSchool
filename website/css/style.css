@@ -30,20 +30,17 @@ nav ul{
     justify-content: center;
 }
 
-nav li{
-    cursor: pointer;
-    background-color: #288B35;
-    padding: 10px 20px;
-}
-
-nav li:hover{
+ul a:hover{
     background-color: #206d2a;
     transition: background-color 0,7s ease-in-out, transform 0,7s ease-in-out;
     transform: scale(1.1);
 }
 
-nav a{
+ul a{
     text-decoration: none;
+     cursor: pointer;
+    background-color: #288B35;
+    padding: 10px 20px;
 }
 
 footer{
