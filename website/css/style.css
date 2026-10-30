@@ -191,7 +191,7 @@ footer a {
 }
 
 .green-home img{
-    width: 20rem;
+    width: 30rem;
     height: auto;
     object-fit: contain;
 }
@@ -359,10 +359,15 @@ button:hover {
         gap: 20px;
     }
 
-    .white-home img,
-    .green-home img {
+    .white-home img {
         width: 60%;
         max-width: 250px;
+    }
+
+
+    .green-home img{
+        width: 60%;
+        max-width: 400px;
     }
 
     .green-home div {
