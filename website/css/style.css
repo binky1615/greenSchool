@@ -41,9 +41,9 @@ nav ul{
     justify-content: center;
 }
 
-nav ul a:hover{
+nav ul a :hover{
     background-color: #206d2a;
-    transition: background-color 0,7s ease-in-out, transform 0,7s ease-in-out;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     transform: scale(1.1);
 }
 
@@ -286,6 +286,7 @@ button {
 
 button:hover {
     background-color: #206d2a;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 #thanks{
