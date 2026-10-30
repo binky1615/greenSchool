@@ -12,7 +12,8 @@ h2,
 h3,
 footer a,
 footer p,
-div button{
+div button,
+a{
     font-family: "Black Ops One", system-ui;
 }
 
