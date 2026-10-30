@@ -3,7 +3,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     color: #000;
     font-family: 'open sans', sans-serif;
 }
@@ -41,7 +40,7 @@ nav ul{
     justify-content: center;
 }
 
-nav ul a :hover{
+nav ul a:hover{
     background-color: #206d2a;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     transform: scale(1.1);
@@ -191,7 +190,7 @@ footer a {
 }
 
 .green-home img{
-    width: 30%;
+    width: 20rem;
     height: auto;
     object-fit: contain;
 }
@@ -293,7 +292,18 @@ button:hover {
     height: 80vh;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 550px){
+
+    nav ul {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 8px;
+        scale: 1;
+    }
+
+}
+
+@media (max-width: 1000px) {
 
     nav {
         height: auto;
@@ -306,11 +316,6 @@ button:hover {
         height: 100px;
     }
 
-    nav ul {
-        flex-wrap: wrap;
-        gap: 8px;
-        scale: 1.5;
-    }
 
     nav li {
         padding: 8px 14px;
@@ -338,6 +343,7 @@ button:hover {
         padding: 30px 20px;
         font-size: 1.2rem;
         text-align: center;
+
     }
 
     .white-home,
