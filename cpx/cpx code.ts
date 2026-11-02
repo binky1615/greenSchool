@@ -1,4 +1,5 @@
-/*
+
+/* 
 Aparte modus maken waarin je dryness value kan aanpassen, 
 kan aanpassen hoeveel licht de plant nodig heeft
 en kan aanpassen hoe warm de plant het moet hebben
@@ -132,5 +133,7 @@ forever(function () {
 
     pause(1000)
 })
-    pause(2000);
-});
+
+
+
+
