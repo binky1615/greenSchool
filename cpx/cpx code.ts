@@ -35,6 +35,7 @@ function waterPlants() {
 
         crickit.motor1.run(60);
 
+        // runned voor 3 seconden
         for (let i = 0; i < 150; i++) {
             if (!ReservoirHasWater) {
                 crickit.motor1.stop();
@@ -50,6 +51,7 @@ function waterPlants() {
 
         crickit.motor1.stop();
 
+        //runned voor 5 seconden
         for (let i = 0; i < 250; i++) {
             if (!ReservoirHasWater) {
                 light.setPixelColor(0, Colors.Indigo)
@@ -133,7 +135,3 @@ forever(function () {
 
     pause(1000)
 })
-
-
-
-
