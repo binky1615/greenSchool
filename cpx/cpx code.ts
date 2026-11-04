@@ -35,7 +35,7 @@ function waterPlants() {
 
         crickit.motor1.run(60);
 
-        // runned voor 3 seconden
+        //runt voor 3 seconden
         for (let i = 0; i < 150; i++) {
             if (!ReservoirHasWater) {
                 crickit.motor1.stop();
@@ -51,7 +51,7 @@ function waterPlants() {
 
         crickit.motor1.stop();
 
-        //runned voor 5 seconden
+        // runt voor 5 seconden
         for (let i = 0; i < 250; i++) {
             if (!ReservoirHasWater) {
                 light.setPixelColor(0, Colors.Indigo)
@@ -125,13 +125,38 @@ forever(function () {
     }
 
     pause(2000);
-});
+})
 
 
 forever(function () {
     CurrentTemperature = input.temperature(TemperatureUnit.Celsius)
 
     console.log("Temperature: " + CurrentTemperature + " °C")
+    if (CurrentTemperature > HighTemperature) {
+        light.setPixelColor(5, Colors.Orange)
+        light.setPixelColor(6, Colors.Orange)
+        light.setPixelColor(7, Colors.Orange)
+        light.setPixelColor(8, Colors.Orange)
+        light.setPixelColor(9, Colors.Orange)
+    }
+    else if (CurrentTemperature > 15) {
+        light.setPixelColor(5, Colors.Green)
+        light.setPixelColor(6, Colors.Green)
+        light.setPixelColor(7, Colors.Green)
+        light.setPixelColor(8, Colors.Green)
+        light.setPixelColor(9, Colors.Green)
+    }
+    else {
+        light.setPixelColor(5, Colors.Blue)
+        light.setPixelColor(6, Colors.Blue)
+        light.setPixelColor(7, Colors.Blue)
+        light.setPixelColor(8, Colors.Blue)
+        light.setPixelColor(9, Colors.Blue)
+    }
 
-    pause(1000)
+
 })
+
+
+
+
