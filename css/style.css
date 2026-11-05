@@ -203,6 +203,63 @@ footer a {
     flex-direction: column;
 }
 
+.green-about,
+.white-about {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px 40px;
+}
+
+.green-about { 
+    background-color: #288B35; 
+}
+
+.white-about { 
+    background-color: #f2f2f2; 
+} 
+
+.green-about h1 {
+    text-align: center;
+}
+
+.about-left,
+.about-right {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.about-left{ 
+    justify-content: flex-start; 
+    flex-direction: row; 
+}
+
+.about-right { 
+    justify-content: flex-end;   
+    flex-direction: row; 
+}
+
+.about-left div,
+.about-right div {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-right div h2,
+.about-right div p {
+    text-align: right;
+}
+
+.white-about img,
+.green-about img{
+    width: auto;
+    height: 20rem;
+    object-fit: contain;
+}
+
 .form-section {
     background-color: #f2f2f2;
     padding: 20px 20px 60px;
