@@ -13,7 +13,7 @@ let CurrentTemperature = 0;
 let ReservoirHasWater = false;
 let LoggingEnabled = true;
 let CurrentLightLevel = 0;
-const LowLightLevel = 180;
+const LowLightLevel = 55;
 
 light.setBrightness(45);
 light.clear();
@@ -37,7 +37,7 @@ function waterPlants() {
 
         crickit.motor1.run(60);
 
-        for (let i = 0; i < 150; i++) {
+        for (let i = 0; i < 3; i++) {
             if (!ReservoirHasWater) {
                 crickit.motor1.stop();
                 light.setPixelColor(0, Colors.Indigo)
@@ -47,12 +47,12 @@ function waterPlants() {
                 light.setPixelColor(4, Colors.Indigo)
                 return;
             }
-            pause(20);
+            pause(1000);
         }
 
         crickit.motor1.stop();
 
-        for (let i = 0; i < 250; i++) {
+        for (let i = 0; i < 5; i++) {
             if (!ReservoirHasWater) {
                 light.setPixelColor(0, Colors.Indigo)
                 light.setPixelColor(1, Colors.Indigo)
@@ -61,7 +61,7 @@ function waterPlants() {
                 light.setPixelColor(4, Colors.Indigo)
                 return;
             }
-            pause(20);
+            pause(1000);
         }
 
         SoilReading = input.pinA2.value();
@@ -72,7 +72,7 @@ control.runInParallel(function checkWaterReservior() {
     while (true) {
         WaterReading = input.pinA7.value();
 
-        if (WaterReading > 900) {
+        if (WaterReading > 800) {
             ReservoirHasWater = true;
         } else {
             ReservoirHasWater = false;
@@ -167,7 +167,3 @@ forever(function () {
         light.setBrightness(255)
     }
 })
-
-
-
-
