@@ -451,6 +451,33 @@ button:hover {
         max-width: 100%;
     }
 
+    .about-left,
+    .about-right {
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .about-right{
+        flex-direction: column-reverse;
+    }
+    
+    .about-left{
+        flex-direction: column;
+    }
+
+    .about-right div,
+    .about-left div{    
+        align-items: flex-start;
+    }
+    .about-right div h2,
+    .about-right div p {
+        text-align: left;
+    }
+    
+    .white-about{
+        gap: 10vh;
+    }
+
     .form-section {
         padding: 20px 15px 40px;
     }
